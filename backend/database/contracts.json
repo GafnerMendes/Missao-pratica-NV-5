@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "empresa": "Tech Solutions",
+    "inicio": "2023-01-15",
+    "details": "Contract A for Tech Solutions",
+    "value": 50000
+  },
+  {
+    "id": 2,
+    "empresa": "Innovate Corp",
+    "inicio": "2022-11-01",
+    "details": "Contract B for Innovate Corp",
+    "value": 120000
+  },
+  {
+    "id": 3,
+    "empresa": "Tech Solutions",
+    "inicio": "2024-03-10",
+    "details": "Contract C for Tech Solutions",
+    "value": 75000
+  },
+  {
+    "id": 4,
+    "empresa": "Future Systems",
+    "inicio": "2023-07-20",
+    "details": "Contract D for Future Systems",
+    "value": 90000
+  }
+]

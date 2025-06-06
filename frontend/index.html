@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Missão Prática</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>RPG0035 - SOFTWARE SEM SEGURANÇA NÃO SERVE!</h1>
+
+      <div id="userInfo" class="user-info" style="display: none">
+        Logado como: <strong id="loggedInUsername"></strong> (<span
+          id="loggedInPerfil"
+        ></span
+        >)
+      </div>
+      <div
+        id="jwtTokenDisplay"
+        class="token-display"
+        style="display: none"
+      ></div>
+
+      <div class="section">
+        <h2>1. Login de Usuário</h2>
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" value="user" />
+        <label for="password">Senha:</label>
+        <input type="password" id="password" value="123456" />
+        <button onclick="loginUser()">Entrar</button>
+
+        <button onclick="loginAdmin()">
+          Entrar como Admin (admin/123456789)
+        </button>
+        <button class="secondary" onclick="logoutUser()">Sair</button>
+        <h3>Resposta:</h3>
+        <pre id="loginResponse"></pre>
+      </div>
+
+      <div class="section">
+        <h2>2. Obter Dados do Meu Usuário</h2>
+        <p>
+          Busca dados para o usuário atualmente logado. (Qualquer usuário
+          autenticado)
+        </p>
+        <button onclick="getMyUserData()">Obter Meus Dados</button>
+        <h3>Resposta:</h3>
+        <pre id="myUserDataResponse"></pre>
+      </div>
+
+      <div class="section">
+        <h2>3. Obter Todos os Usuários (Requer Perfil de Admin)</h2>
+        <p>Este endpoint requer privilégios de 'admin'.</p>
+        <button onclick="getAllUsers()">Obter Todos os Usuários</button>
+        <h3>Resposta:</h3>
+        <pre id="allUsersResponse"></pre>
+      </div>
+
+      <div class="section">
+        <h2>4. Obter Contratos (Autenticado)</h2>
+        <p>
+          Demonstra a busca de dados e a proteção contra injeção SQL. Parâmetros
+          agora são parâmetros de consulta.
+        </p>
+        <label for="contractEmpresa">Empresa (opcional):</label>
+        <input
+          type="text"
+          id="contractEmpresa"
+          placeholder="ex: Tech Solutions"
+        />
+        <label for="contractInicio">Data Início (AAAA-MM-DD, opcional):</label>
+        <input type="text" id="contractInicio" placeholder="ex: 2023-01-15" />
+        <button onclick="getContracts()">Obter Contratos</button>
+        <h3>Resposta:</h3>
+        <pre id="contractsResponse"></pre>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
